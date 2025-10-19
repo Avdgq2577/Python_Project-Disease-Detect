@@ -1,7 +1,7 @@
 # CropDetect - Crop Disease Detection (Enhanced Version)
 
 This is a full-featured Django project skeleton for **CropDetection**:
-- Crop disease detection using a pre-trained CNN model (placeholder included)
+- Crop disease detection using a pre-trained CNN model
 - Grad-CAM visualization for explainability
 - Severity estimation
 - Multi-crop support
