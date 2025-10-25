@@ -1,1 +1,58 @@
-/* custom styles */
+/* Custom styles for AgriVision */
+:root{
+	--primary:#0d6efd;
+	--card-bg:#ffffff;
+	--muted:#6c757d;
+}
+
+body{
+	background: linear-gradient(180deg, #f7fbff 0%, #f3f7f9 100%);
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	color: #223;
+}
+
+.navbar-brand{
+	color: var(--primary) !important;
+}
+
+.card{
+	border-radius: 12px;
+}
+
+.preview-wrap{
+	max-width: 260px;
+	width: 100%;
+}
+
+.preview-img{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 8px;
+	background: #fff;
+}
+
+.btn-primary{
+	background: linear-gradient(90deg, #0d6efd 0%, #2563eb 100%);
+	border: none;
+	box-shadow: 0 6px 18px rgba(13,110,253,0.12);
+}
+
+.btn-outline-secondary{
+	border-radius: 8px;
+}
+
+.card .bg-light{
+	background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+/* make the form inputs slightly larger and friendlier */
+.form-control, .form-select, .form-check-input{
+	border-radius: 8px;
+	padding: .75rem .9rem;
+}
+
+/* small screens adjustment */
+@media (max-width: 767px){
+	.preview-wrap{ max-width: 100%; margin-top: 1rem; }
+}
