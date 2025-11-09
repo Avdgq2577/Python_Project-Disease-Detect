@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f0fff0, #e0ffe0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #2d572c;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>🧬 Prediction Result</h1>
+        <p><strong>Disease:</strong> {{ label }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+
+        {% if remedy %}
+        <p><strong>Suggested Remedy:</strong> {{ remedy }}</p>
+        {% endif %}
+
+        <a href="{% url 'upload' %}">🔁 Try Another Image</a>
+    </div>
+</body>
+</html>
