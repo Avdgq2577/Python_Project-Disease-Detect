@@ -1,12 +1,11 @@
 # CropDetect - Crop Disease Detection (Enhanced Version)
 
-This is a full-featured Django project skeleton for **CropDetection**:
+This is a full-featured Django project for **CropDetection**:
 - Crop disease detection using a pre-trained CNN model
 - Grad-CAM visualization for explainability
 - Severity estimation
 - Multi-crop support
 - Recommendation database and prediction history
-- Analytics dashboard placeholders
 
 ## How to run locally
 1. Create virtual env:
@@ -28,4 +27,3 @@ This is a full-featured Django project skeleton for **CropDetection**:
 
 6. Open: http://127.0.0.1:8000/
 
-Note: The `ml_model/crop_disease_model.h5` is a small placeholder file. Replace with your trained model for actual predictions.
