@@ -4,6 +4,8 @@ from django.shortcuts import render
 from PIL import Image
 import tflite_runtime.interpreter as tflite
 import pandas as pd
+
+
 remedies = pd.read_csv(os.path.join(settings.BASE_DIR, 'models', 'remedies.csv'))
 remedies = remedies.set_index('disease')['remedy'].to_dict()
 MODEL_PATH = os.path.join(settings.BASE_DIR, 'models', 'plant_model.tflite')
