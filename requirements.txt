@@ -1,5 +1,6 @@
 Django==4.2
-tensorflow==2.20.0
+tensorflow-cpu
+tflite
 numpy
 pillow
 opencv-python
