@@ -137,8 +137,11 @@ def upload_view(request):
         remedy = remedy_dict.get(cleaned_label, "No remedy found for this disease.")
         causes = causes_dict.get(cleaned_label, "No causes information available.")
         similar = similar_dict.get(cleaned_label, "")
-        similar_list = [s.strip() for s in similar.split(',')] if similar else []
-
+        #similar_list = [s.strip() for s in similar.split(',')] if similar else []
+        if isinstance(similar, str) and similar.strip():
+            similar_list = [s.strip() for s in similar.split(',')]
+        else:
+            similar_list = []
         # os.remove(saved_path)  # Uncomment if you don't need to keep uploaded images
 
         # Send all data to template
