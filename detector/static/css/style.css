@@ -1,0 +1,394 @@
+/* ---------- Global Styles ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4fff4;
+    color: #333;
+}
+a {
+    text-decoration: none;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+    background-color: #2e7d32;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ---------- Page Containers ---------- */
+.content {
+    min-height: 80vh;
+    padding: 60px 20px;
+}
+
+/* ---------- Home Page ---------- */
+.home-container {
+    text-align: center;
+    padding: 50px;
+}
+.home-container h1 {
+    color: #1b5e20;
+    font-size: 40px;
+}
+.home-container p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.home-container img {
+    width: 70%;
+    border-radius: 20px;
+    margin: 30px 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+.home-container ol {
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.8;
+    font-size: 17px;
+}
+.start-btn {
+    background-color: #43a047;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.start-btn:hover {
+    background-color: #2e7d32;
+}
+
+/* ---------- Upload Page ---------- */
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.upload-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.upload-box h2 {
+    color: #1b5e20;
+}
+.upload-box input[type=file] {
+    margin: 20px 0;
+}
+.upload-box button {
+    background: #43a047;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.upload-box button:hover {
+    background: #2e7d32;
+}
+
+/* ---------- Result Page ---------- */
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.result-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    width: 80%;
+    max-width: 900px;
+}
+.result-box h2 {
+    text-align: center;
+    color: #1b5e20;
+}
+.result-box img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: block;
+    margin: 20px auto;
+}
+.result-details {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.result-details strong {
+    color: #2e7d32;
+}
+.similar-diseases {
+    background: #f1f8e9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 25px;
+}
+.try-again {
+    display: inline-block;
+    margin-top: 30px;
+    background: #43a047;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+}
+.try-again:hover {
+    background: #2e7d32;
+}
+
+
+/*----------Home Page Stylesheet ----------*/
+.home-section {
+    position: relative;
+    background: url("/media/HealthyPlants.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backdrop-filter: blur(6px) brightness(0.8);
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 800px;
+}
+
+.overlay h1 {
+    color: #1b5e20;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.overlay h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+.overlay ol {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+.start-btn {
+    background-color: #43a047;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.start-btn:hover {
+    background-color: #2e7d32;
+}
+
+.upload-section {
+    position: relative;
+    background: url("/media/HealthyPlants.jpeg")
+                no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+upload-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backdrop-filter: blur(8px) brightness(0.8);
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+} 
+.upload-overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upload-box {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.upload-box h2 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.upload-box p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.upload-box input[type=file] {
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.upload-box button {
+    background-color: #43a047;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.upload-box button:hover {
+    background-color: #2e7d32;
+}
+@media (max-width: 600px) {
+    .upload-box {
+        padding: 30px;
+    }
+    .upload-box h2 {
+        font-size: 22px;
+    }
+    .upload-box p {
+        font-size: 14px;
+    }
+}
+/* ---------- Vision Section ---------- */
+.vision-section {
+    background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.vision-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 900px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.vision-card:hover {
+    transform: scale(1.02);
+}
+.vision-card h2 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.vision-card p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* ---------- Benefits Section ---------- */
+.benefits-section {
+    background: #f1f8e9;
+    padding: 80px 30px;
+    text-align: center;
+}
+.benefits-section h2 {
+    color: #2e7d32;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* Benefits Container with Cards */
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.benefit-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    padding: 30px;
+    width: 280px;
+    transition: all 0.3s ease;
+}
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.benefit-card h3 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.benefit-card p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .vision-card {
+        padding: 30px;
+    }
+    .benefit-card {
+        width: 90%;
+    }
+}

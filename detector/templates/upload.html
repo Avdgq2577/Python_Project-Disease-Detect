@@ -1,52 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>AI Plant Disease Detector</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #e6ffe6, #ccffcc);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .upload-box {
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        input[type=file] {
-            margin: 20px 0;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        h1 {
-            color: #2d572c;
-        }
-    </style>
-</head>
-<body>
-    <div class="upload-box">
-        <h1> AI Plant Disease Detector</h1>
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="file" name="image" accept="image/*" required><br>
-            <button type="submit">Predict Disease</button>
-        </form>
+{% extends 'base.html' %}
+{% block title %}Detect Disease - CropDetect AI{% endblock %}
+{% block content %}
+<div class="upload-section">
+    <div class="upload-overlay">
+        <div class="upload-box">
+            <h2> Upload a Leaf Image</h2>
+            <p>Detect plant diseases quickly using our AI model</p>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="image" accept="image/*" required><br>
+                <button type="submit">🔍 Analyze</button>
+            </form>
+        </div>
     </div>
-</body>
-</html>
+</div>
+
+{% endblock %}

@@ -1,47 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Prediction Result</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #f0fff0, #e0ffe0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .result-box {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-        h1 {
-            color: #2d572c;
-        }
-        p {
-            font-size: 18px;
-            color: #333;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            background: #28a745;
-            color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-        }
-        a:hover {
-            background: #218838;
-        }
-    </style>
-</head>
-<body>
+
+  {% extends 'base.html' %}
+{% block title %}Detection Result - AgriVision{% endblock %}
+
+{% block content %}
+<div class="result-container">
     <div class="result-box">
+        <h2>Detection Result</h2>
+        <img src="{{ uploaded_image_url }}" alt="Uploaded Image">
+        
+        <div class="result-details">
+            <p><strong>Disease:</strong> {{ label }}</p>
+            <p><strong>Confidence:</strong> {{ confidence }}%</p>
+            <p><strong>Causes:</strong> {{ causes }}</p>
+            <p><strong>Remedies:</strong> {{ remedies }}</p>
+        </div>
+
+        {% if similar_diseases %}
+        <div class="similar-diseases">
+            <strong>Similar Diseases:</strong>
+            <ul>
+                {% for disease in similar_diseases %}
+                    <li>{{ disease }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <a href="{% url 'upload' %}" class="try-again">🔁 Try Another Image</a>
+    </div>
+</div>
+{% endblock %}
+
+  <!--
+
+  <div class="result-box">
         <h1>Prediction Result</h1>
         <p><strong>Disease:</strong> {{ label }}</p>
         <p><strong>Confidence:</strong> {{ confidence }}%</p>
@@ -52,5 +44,5 @@
 
         <a href="{% url 'upload' %}">🔁 Try Another Image</a>
     </div>
-</body>
-</html>
+  -->
+

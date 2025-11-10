@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Home - CropDetect AI{% endblock %}
+{% block content %}
+<div class="home-section">
+    <div class="overlay">
+        <h1>Welcome to CropDetect AI </h1>
+        <p>An AI-powered tool to help farmers and researchers detect plant diseases using leaf images.</p>
+
+        <h2>How It Works</h2>
+        <ol>
+            <li>Upload a clear image of the plant leaf.</li>
+            <li>Our AI model analyzes the image and detects any potential disease.</li>
+            <li>View the detected disease, possible causes, and recommended remedies instantly.</li>
+        </ol>
+
+        <a href="{% url 'upload' %}" class="start-btn">🔍 Start Detection</a>
+    </div>
+    
+</div>
+<section class="vision-section">
+    <div class="vision-card">
+        <h2>Our Vision</h2>
+        <p>
+            CropDetect AI envisions empowering farmers and agricultural researchers with advanced AI-based tools 
+            to identify crop diseases early and accurately. 
+            By combining image recognition technology with plant pathology knowledge, 
+            we aim to minimize crop loss, ensure food security, and promote sustainable farming.
+        </p>
+    </div>
+</section>
+<section class="benefits-section">
+    <h2>How CropDetect AI Helps</h2>
+    <div class="benefits-container">
+        <div class="benefit-card">
+            <h3>Early Detection</h3>
+            <p>Detect plant diseases before they spread and prevent large-scale crop loss.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>Easy to Use</h3>
+            <p>Accessible from any device with an internet connection — no technical skills required.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>Smart Remedies</h3>
+            <p>Get instant remedies and care suggestions based on the detected plant disease.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

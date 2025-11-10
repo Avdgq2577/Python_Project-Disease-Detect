@@ -1,0 +1,4 @@
+disease,causes,remedy,similar_diseases
+Healthy,"No infection detected. The plant appears to be in good condition.","Maintain proper watering, sunlight, and balanced fertilizer application.","None"
+Rusty,"Caused by rust fungi that produce reddish or orange spores on leaves.","Remove infected leaves, apply sulfur or copper-based fungicides, and avoid overhead watering.","Powdery, Leaf Spot"
+Powdery,"Caused by powdery mildew fungi forming white, powdery spots on leaves and stems.","Ensure good air circulation, reduce humidity, and spray with neem oil or fungicides.","Rusty, Leaf Curl"
