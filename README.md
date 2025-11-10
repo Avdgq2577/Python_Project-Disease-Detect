@@ -27,5 +27,3 @@ This is a full-featured Django project skeleton for **CropDetection**:
    python manage.py runserver
 
 6. Open: http://127.0.0.1:8000/
-
-Note: The `ml_model/crop_disease_model.h5` is a small placeholder file. Replace with your trained model for actual predictions.
