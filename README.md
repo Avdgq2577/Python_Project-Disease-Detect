@@ -2,9 +2,9 @@
 
 This is a full-featured Django project for **CropDetection**:
 - Crop disease detection using a pre-trained CNN model
-- Grad-CAM visualization for explainability
+- Similar disease suggestion
 - Severity estimation
-- Multi-crop support
+- Multi-crop-leaf support
 - Recommendation database and prediction history
 
 ## How to run locally
