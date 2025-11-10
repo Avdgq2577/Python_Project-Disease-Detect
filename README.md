@@ -26,4 +26,3 @@ This is a full-featured Django project for **CropDetection**:
    python manage.py runserver
 
 6. Open: http://127.0.0.1:8000/
-
